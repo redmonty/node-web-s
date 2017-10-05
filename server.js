@@ -20,11 +20,11 @@ app.use((req,res,next) => {
     next();//перейдет на стр после next()
 });
 
-//created maintance middlewhere
-app.use((req,res,next) => {
-    res.render('maintance.hbs');
+// //created maintance middlewhere
+// app.use((req,res,next) => {
+//     res.render('maintance.hbs');
 
-});
+// });
 
 app.use(express.static(__dirname + '/public'));
 
@@ -46,6 +46,11 @@ app.get('/', (req,res) => {
 app.get('/about', (req,res) => {
     res.render('about.hbs',{
         pageTitle: 'About page',
+    });   
+});
+app.get('/portfolio', (req,res) => {
+    res.render('portfolio.hbs',{
+        pageTitle: 'Portfolio page',
     });   
 });
 
